@@ -7,6 +7,8 @@
 export function isSuperset (a, b, proper=false) {
   if (proper) {
     return isProperSuperset(a, b)
+  } else if (a.size < b.size) {
+    return false
   }
   for (const elem of b) {
     if (!a.has(elem)) {
@@ -22,5 +24,5 @@ export function isSuperset (a, b, proper=false) {
  * @param {Set} b
  */
 export function isProperSuperset (a, b) {
-  return a.size !== b.size && isSuperset(a, b)
+  return a.size > b.size && isSuperset(a, b)
 }
