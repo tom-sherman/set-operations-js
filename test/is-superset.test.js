@@ -1,5 +1,5 @@
 const t = require('tap')
-const { isSuperset, isProperSuperset, stringify } = require('../index.js')
+const { isSuperset, isProperSuperset, stringify } = require('../dist/set-operations.js')
 
 const properSupersets = [
   [ [1, 2, 3], [1] ],

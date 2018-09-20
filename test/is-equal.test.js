@@ -1,5 +1,5 @@
 const t = require('tap')
-const { isEqual } = require('../index.js')
+const { isEqual } = require('../dist/set-operations.js')
 
 t.test('is equal', t => {
   const equalSets = [

@@ -47,26 +47,14 @@
    *
    * @param {Set} a
    * @param {Set} b
-   * @param {boolean} symmetric
    */
-  function difference (a, b, symmetric = false) {
-    // if (symmetric) {
-    //   return symmetricDifference(a, b)
-    // }
+  function difference (a, b) {
     const difference = new Set(a);
     for (const elem of b) {
       difference.delete(elem);
     }
     return difference
   }
-
-  // /**
-  //  *
-  //  * @param  {...Set} sets
-  //  */
-  // export function symmetricDifference (...sets) {
-  //   const diffs = []
-  // }
 
   /**
    * Flattens an array with depth of 1.
@@ -109,8 +97,33 @@
    * @param  {...Set} sets
    */
   function union (...sets) {
-    // TODO: Test performance vs nested for;of loop
+    // TODO: Test performance vs nested for;of loop vs reduce
     return new Set(flatten(sets.map(set => [...set])))
+  }
+
+  /**
+   *
+   * @param {Set} a
+   * @param {Set} b
+   */
+  function intersect (a, b) {
+    const intersection = new Set();
+    for (const elem of b) {
+      if (a.has(elem)) {
+        intersection.add(elem);
+      }
+    }
+    return intersection
+  }
+
+  /**
+   *
+   * @param {Set} a
+   * @param {Set} b
+   * @param  {...Set} sets
+   */
+  function intersection (...sets) {
+    return sets.reduce(intersect, sets[0])
   }
 
   var index = {
@@ -119,9 +132,12 @@
     isEqual,
     difference,
     union,
+    intersect,
+    intersection,
     stringify
   };
 
   return index;
 
 })));
+//# sourceMappingURL=set-operations.js.map

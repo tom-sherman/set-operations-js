@@ -1,5 +1,5 @@
 const t = require('tap')
-const { difference, isEqual } = require('../index.js')
+const { difference, isEqual } = require('../dist/set-operations.js')
 
 t.test('difference', t => {
   const differences = [

@@ -1,5 +1,5 @@
 const t = require('tap')
-const { union, isEqual } = require('../index.js')
+const { union, isEqual } = require('../dist/set-operations.js')
 
 t.test('union', t => {
   t.equal(isEqual(
