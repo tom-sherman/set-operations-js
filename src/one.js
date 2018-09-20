@@ -26,7 +26,7 @@ export function isSubset (a, b) {
  * @param  {...Set} sets
  */
 export function isMutuallyExclusive (...sets) {
-  const sumSizes = sets.reduce((acc, set) => acc += set.size, 0)
+  const sumSizes = sets.reduce((acc, set) => { acc += set.size }, 0)
   const unionSize = union(...sets).size
   return sumSizes === unionSize
 }

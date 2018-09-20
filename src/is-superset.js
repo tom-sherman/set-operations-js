@@ -4,7 +4,7 @@
  * @param {Set} b
  * @param {boolean} [proper=false]
  */
-export function isSuperset (a, b, proper=false) {
+export function isSuperset (a, b, proper = false) {
   if (proper) {
     return isProperSuperset(a, b)
   } else if (a.size < b.size) {

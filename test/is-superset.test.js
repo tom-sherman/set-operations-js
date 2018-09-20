@@ -2,13 +2,13 @@ const t = require('tap')
 const { isSuperset, isProperSuperset, stringify } = require('../index.js')
 
 const properSupersets = [
-  [ [1,2,3], [1] ],
-  [ [1,2,3], [] ]
+  [ [1, 2, 3], [1] ],
+  [ [1, 2, 3], [] ]
 ]
 
 const symmetrical = [
   [ [1], [1] ],
-  [ [1,2,3], [1,2,3] ]
+  [ [1, 2, 3], [1, 2, 3] ]
 ]
 
 t.test('is superset', t => {
@@ -25,7 +25,6 @@ t.test('is proper superset', t => {
   })
   t.end()
 })
-
 
 t.test('not supersets', t => {
   const notSupersets = properSupersets.map(x => x.reverse())

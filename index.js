@@ -10,7 +10,7 @@
    * @param {Set} b
    * @param {boolean} [proper=false]
    */
-  function isSuperset (a, b, proper=false) {
+  function isSuperset (a, b, proper = false) {
     if (proper) {
       return isProperSuperset(a, b)
     } else if (a.size < b.size) {
@@ -62,7 +62,7 @@
    */
   function stringify (set) {
     // TODO: Separate package
-    return `Set(${set.size}) {${ [...set].map(stringifyElement).join(', ') }}`
+    return `Set(${set.size}) {${[...set].map(stringifyElement).join(', ')}}`
   }
 
   function stringifyElement (element) {
@@ -73,9 +73,9 @@
     } else if (typeof element === 'undefined') {
       return 'undefined'
     } else if (typeof element === 'string') {
-      return `"${ element }"`
+      return `"${element}"`
     } else if (Array.isArray(element)) {
-      return `Array(${ element.length })`
+      return `Array(${element.length})`
     } else if (typeof element === 'function') {
       return 'Fn'
     } else {
