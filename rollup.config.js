@@ -1,7 +1,7 @@
 export default {
   input: './src/index.js',
-  sourceMap: true,
   output: {
+    sourceMap: true,
     file: './dist/set-operations.js',
     name: 'setOps',
     format: 'umd'
