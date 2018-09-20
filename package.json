@@ -1,0 +1,17 @@
+{
+  "name": "set-operations",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "module": "./src/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "npm run build && tap ./test/*.test.js"
+  },
+  "author": "Tom Sherman",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^0.66.0",
+    "tap": "^12.0.1"
+  }
+}
