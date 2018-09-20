@@ -4,3 +4,4 @@
 require('./difference.test.js')
 require('./is-equal.test.js')
 require('./is-superset.test.js')
+require('./union.test.js')

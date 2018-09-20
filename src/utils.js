@@ -1,4 +1,10 @@
-export function flatten () {}
+/**
+ * Flattens an array with depth of 1.
+ * @param {Array} arr
+ */
+export function flatten (arr) {
+  return arr.reduce((acc, val) => acc.concat(val), [])
+}
 
 /**
  * Stringifies a set into the format:

@@ -1,6 +1,9 @@
 import { isSuperset, isProperSuperset } from './is-superset'
 import { isEqual } from './is-equal'
+
 import { difference } from './difference'
+import { union } from './union'
+
 import { stringify } from './utils'
 
 export default {
@@ -8,5 +11,6 @@ export default {
   isProperSuperset,
   isEqual,
   difference,
+  union,
   stringify
 }

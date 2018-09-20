@@ -47,13 +47,33 @@
    *
    * @param {Set} a
    * @param {Set} b
+   * @param {boolean} symmetric
    */
-  function difference (a, b) {
+  function difference (a, b, symmetric = false) {
+    // if (symmetric) {
+    //   return symmetricDifference(a, b)
+    // }
     const difference = new Set(a);
     for (const elem of b) {
       difference.delete(elem);
     }
     return difference
+  }
+
+  // /**
+  //  *
+  //  * @param  {...Set} sets
+  //  */
+  // export function symmetricDifference (...sets) {
+  //   const diffs = []
+  // }
+
+  /**
+   * Flattens an array with depth of 1.
+   * @param {Array} arr
+   */
+  function flatten (arr) {
+    return arr.reduce((acc, val) => acc.concat(val), [])
   }
 
   /**
@@ -84,11 +104,21 @@
     }
   }
 
+  /**
+   *
+   * @param  {...Set} sets
+   */
+  function union (...sets) {
+    // TODO: Test performance vs nested for;of loop
+    return new Set(flatten(sets.map(set => [...set])))
+  }
+
   var index = {
     isSuperset,
     isProperSuperset,
     isEqual,
     difference,
+    union,
     stringify
   };
 
