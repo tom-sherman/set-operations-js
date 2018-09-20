@@ -11,9 +11,10 @@
    * @param {boolean} [proper=false]
    */
   function isSuperset (a, b, proper = false) {
-    if (proper) {
-      return isProperSuperset(a, b)
-    } else if (a.size < b.size) {
+    if (a.size < b.size) {
+      return false
+    }
+    if (proper && a.size === b.size) {
       return false
     }
     for (const elem of b) {
@@ -30,7 +31,7 @@
    * @param {Set} b
    */
   function isProperSuperset (a, b) {
-    return a.size > b.size && isSuperset(a, b)
+    return isSuperset(a, b, true)
   }
 
   /**
