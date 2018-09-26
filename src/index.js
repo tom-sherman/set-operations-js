@@ -1,5 +1,6 @@
 import { isSuperset, isProperSuperset } from './is-superset'
 import { isEqual } from './is-equal'
+import { isMutuallyExclusive } from './is-mutually-exclusive'
 
 import { difference } from './difference'
 import { union } from './union'
@@ -11,6 +12,7 @@ export default {
   isSuperset,
   isProperSuperset,
   isEqual,
+  isMutuallyExclusive,
   difference,
   union,
   intersect,
