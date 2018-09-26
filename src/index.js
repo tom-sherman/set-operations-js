@@ -5,6 +5,7 @@ import { isMutuallyExclusive } from './is-mutually-exclusive'
 import { difference } from './difference'
 import { union } from './union'
 import { intersect, intersection } from './intersection'
+import { product } from './product'
 
 import { stringify } from './utils'
 
@@ -17,5 +18,6 @@ export default {
   union,
   intersect,
   intersection,
+  product,
   stringify
 }
